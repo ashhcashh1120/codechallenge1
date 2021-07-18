@@ -1,0 +1,16 @@
+<div class="ui sizer vertical segment">
+    <div class="ui huge header">Welcome To The Library Catalog</div>
+    <p></p>
+    <nav>
+        <div>
+            <h3> Select a genre</h3>
+            <select #ddlBookCat (change)="getBooks(ddlBookCat.value)">
+                <option [value]="cat.id" *ngFor="let cat of lstCategory"> {{cat.name}} </option>
+            </select>
+        </div>
+    </nav>
+</div>
+
+
+<!-- <select  #ddlBookCat (change)="onChange(ddlBookCat.value)"> -->
+<!-- <option [value]="cat.id" *ngFor="let cat of lstCategory"> {{cat.genre}} </option> -->
